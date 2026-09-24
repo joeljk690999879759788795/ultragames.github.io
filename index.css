@@ -1,0 +1,73 @@
+:root {
+  color-scheme: dark;
+  --background: #08131d;
+  --panel: rgba(15, 31, 43, 0.88);
+  --panel-border: rgba(157, 209, 211, 0.18);
+  --text: #f4f8f7;
+  --accent: #55d6c2;
+  --accent-strong: #2eb8a5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  padding: 2rem 1rem;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  color: var(--text);
+  background: var(--background);
+}
+
+.menu {
+  width: min(100%, 31rem);
+  padding: clamp(2.25rem, 8vw, 4rem) clamp(1.5rem, 8vw, 3.5rem);
+  text-align: center;
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+}
+
+.menu::before {
+  display: block;
+  width: 3.5rem;
+  height: 0.25rem;
+  margin: 0 auto 1.75rem;
+  content: "";
+  background: var(--accent);
+}
+
+h1 {
+  margin: 0 0 2.25rem;
+  font-size: clamp(2rem, 8vw, 3rem);
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+}
+
+.game-button {
+  display: block;
+  padding: 1rem 1.25rem;
+  color: #06231f;
+  background: var(--accent);
+  border: 2px solid transparent;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+}
+
+.game-button:hover {
+  background: #78e6d4;
+}
+
+.game-button:focus-visible {
+  outline: 3px solid #f2c879;
+  outline-offset: 4px;
+}
+
+.game-button:active {
+  background: var(--accent-strong);
+}
